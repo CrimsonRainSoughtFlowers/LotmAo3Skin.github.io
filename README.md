@@ -6,7 +6,7 @@
 
 ## How to install
 
-Log in to AO3 and go to **My Preferences → Skins** (or **Work Skins** if you want it to apply only to a specific work). Click **Create Skin**. Give it a unique title (e.g. "LOTM — The Fool"). Paste the entire contents of CSS into the CSS field.
+Log in to AO3 and go to **My Preferences → Skins** (or **Work Skins** if you want it to apply only to a specific work). Click **Create Skin**. Give it a unique title (e.g. "LOTM — The Fool"). Paste the entire contents of CSS into the CSS field.This skin is not meant to replace the settings. It will add onto the existing settings from Ao3.
 
 ## What's in the file:
 

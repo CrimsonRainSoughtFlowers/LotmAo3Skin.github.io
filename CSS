@@ -1,0 +1,874 @@
+/* This is still a work in Progress.
+  The Design still might have some issues, and I want to optimize the File further. This CSS is currently working fine for Desktop and Mobile. But I optimized it more for Mobile because I read on my Phone all the time.
+  If you find any Bugs please let me know or keep them.  */
+
+
+:root {
+  --lotm-bg: #0A0C10;
+  --lotm-bg-2: #12161C;
+  --lotm-panel: #171B22;
+  --lotm-panel-2: #1E232B;
+  --lotm-panel-3: #262C35;
+  --lotm-bronze: #6F5A3A;
+  --lotm-gold: #C2A15A;
+  --lotm-gold-soft: #D8BE82;
+  --lotm-gold-glow: rgba(194, 161, 90, 0.35);
+  --lotm-green: #35513F;
+  --lotm-wine: #5A2B30;
+  --lotm-purple: #4A3A5C;
+  --lotm-paper: #D9CFB8;
+  --lotm-paper-dim: #A99F88;
+  --lotm-link: #C9A85E;
+  --lotm-hover: #F0D699;
+  --lotm-visited: #9C8B63;
+  --lotm-border: #5A4930;
+  --lotm-border-soft: rgba(111, 90, 58, 0.45);
+}
+
+html,
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: var(--lotm-bg) !important;
+  background-image: radial-gradient(circle at 50% -10%, rgba(194,161,90,0.10), transparent 55%),
+        linear-gradient(180deg, #0C0F14 0%, #080A0E 100%) !important;
+  background-attachment: scroll !important;
+  color: var(--lotm-paper) !important;
+  font-family: "Georgia", "Palatino Linotype", "Book Antiqua", serif !important;
+  font-size: 15px !important;
+}
+
+#outer,
+#inner {
+  background: transparent !important;
+}
+
+#outer {
+  box-shadow: inset 0 0 130px 25px rgba(8, 10, 14, 0.80),
+        inset 0 0 40px 4px rgba(194, 161, 90, 0.07) !important;
+}
+
+#inner {
+  box-shadow: inset 0 0 80px 10px rgba(8, 10, 14, 0.45) !important;
+}
+
+#outer,
+#inner,
+#wrapper,
+#main {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#wrapper,
+#main {
+  background: transparent !important;
+  color: var(--lotm-paper) !important;
+}
+
+#main {
+  border: none !important;
+  padding: 0 8px !important;
+}
+
+#outer,
+#inner,
+#wrapper,
+#main,
+#workskin,
+#chapters,
+.userstuff {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+#dashboard,
+#dashboard.own,
+#dashboard .navigation,
+#dashboard ul {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: var(--lotm-border-soft) !important;
+  box-shadow: none !important;
+}
+
+body,
+p,
+li,
+dd,
+dt,
+.userstuff,
+blockquote {
+  color: var(--lotm-paper) !important;
+}
+
+.footnote,
+.landmark,
+p.note,
+.meta .stats {
+  color: var(--lotm-paper-dim) !important;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.userstuff,
+p,
+blockquote,
+li {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+#header {
+  background-color: var(--lotm-bg-2) !important;
+  position: relative;
+  z-index: 100;
+  background-image: radial-gradient(circle at 50% 120%, rgba(194, 161, 90, 0.35), transparent 60%),
+        linear-gradient(180deg, #1C2028 0%, #12151B 100%) !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center, center !important;
+  background-size: auto, auto !important;
+  border-bottom: 2px solid var(--lotm-gold) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7) !important;
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://CrimsonRainSoughtFlowers.github.io/LotmAo3Skin.github.io/fog.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+#header .heading a span,
+#header .heading a sup {
+  display: none !important;
+}
+
+#header .heading a::after {
+  content: "\2740  THE FOOL  \2022  WHO SITS ABOVE THE GRAY FOG  \2740";
+  display: block;
+  font-family: "Georgia", "Palatino Linotype", serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--lotm-gold-soft) !important;
+  text-shadow: 0 0 10px var(--lotm-gold-glow), 0 1px 3px rgba(0,0,0,0.8);
+  white-space: normal;
+  vertical-align: middle;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#header .heading a:hover::after {
+  color: var(--lotm-hover) !important;
+}
+
+#header ul.primary,
+#header .primary {
+  background: transparent !important;
+  border-color: var(--lotm-border-soft) !important;
+}
+
+#header .primary li a,
+#header .actions a,
+#header .user a,
+#header #search .button {
+  background: transparent !important;
+  color: var(--lotm-link) !important;
+  border: none !important;
+  box-shadow: none !important;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+#header .primary li a:hover,
+#header .primary li.open > a,
+#header .primary .dropdown:hover > a,
+#header .actions a:hover,
+#header .user a:hover,
+#header a:focus {
+  color: var(--lotm-hover) !important;
+  text-shadow: 0 0 8px var(--lotm-gold-glow) !important;
+}
+
+#header .current,
+#header .primary .current {
+  background: var(--lotm-panel-3) !important;
+  color: var(--lotm-gold-soft) !important;
+  border-radius: 4px !important;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.6) !important;
+}
+
+#header .menu,
+#header .dropdown .menu,
+#small_login {
+  background: var(--lotm-panel-2) !important;
+  border: 1px solid var(--lotm-border) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.8) !important;
+  border-radius: 6px !important;
+}
+
+#header .menu li a {
+  color: var(--lotm-paper) !important;
+  background: transparent !important;
+}
+
+#header .menu li a:hover,
+#header .menu li a:focus {
+  background: var(--lotm-panel-3) !important;
+  color: var(--lotm-gold-soft) !important;
+}
+
+#header .search input.text {
+  background: var(--lotm-bg) !important;
+  color: var(--lotm-paper) !important;
+  border: 1px solid var(--lotm-border) !important;
+  border-radius: 5px !important;
+}
+
+a {
+  color: var(--lotm-link) !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--lotm-hover) !important;
+  text-shadow: 0 0 6px var(--lotm-gold-glow) !important;
+}
+
+a:visited {
+  color: var(--lotm-visited) !important;
+}
+
+#main .blurb a:visited,
+.bookmark a:visited {
+  color: var(--lotm-visited) !important;
+}
+
+.blurb,
+.work,
+.comment,
+.meta,
+dl.meta,
+.bookmark,
+.preface,
+.statistics,
+.listbox,
+.listbox .index,
+fieldset,
+.userstuff.module,
+li.blurb {
+  background-color: var(--lotm-panel) !important;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15)) !important;
+  border: 1px solid var(--lotm-border) !important;
+  border-radius: 5px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+  color: var(--lotm-paper) !important;
+}
+
+.blurb,
+.work,
+.comment,
+.meta,
+fieldset,
+.listbox {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  box-sizing: border-box !important;
+}
+
+li.blurb:hover,
+.work:hover {
+  border-color: var(--lotm-gold) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+}
+
+fieldset {
+  padding: 1em 1.2em !important;
+}
+
+legend {
+  color: var(--lotm-gold-soft) !important;
+  background: var(--lotm-panel-2) !important;
+  border: 1px solid var(--lotm-border) !important;
+  border-radius: 4px !important;
+  padding: 2px 10px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--lotm-gold-soft) !important;
+  font-family: "Georgia", "Palatino Linotype", serif !important;
+  font-weight: normal !important;
+  letter-spacing: 1.5px !important;
+  text-shadow: 0 1px 0 #000 !important;
+}
+
+.heading,
+.blurb .header .heading a,
+h2.title,
+h3.title {
+  color: var(--lotm-gold-soft) !important;
+}
+
+#main h2.heading::before,
+#main h3.heading::before,
+#main h2.heading::after,
+#main h3.heading::after {
+  content: "" !important;
+}
+
+.actions a,
+.action,
+.actions input,
+button,
+input[type="submit"],
+input[type="button"],
+.actions label.action {
+  background-color: var(--lotm-bronze) !important;
+  background-image: linear-gradient(180deg, #8A6F44 0%, #4E3E26 100%) !important;
+  color: var(--lotm-paper) !important;
+  border: 1px solid var(--lotm-gold) !important;
+  border-radius: 5px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),
+        0 2px 6px rgba(0,0,0,0.5) !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.6) !important;
+  letter-spacing: 0.05em !important;
+  transition: all 0.2s ease;
+  padding: 4px 8px !important;
+  font-size: 0.85em !important;
+  line-height: 1.2 !important;
+  min-height: 0 !important;
+  display: inline-block;
+}
+
+.actions a:hover,
+.action:hover,
+.actions input:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.actions a:focus,
+button:focus {
+  background-image: linear-gradient(180deg, #A9854E 0%, #63502F 100%) !important;
+  color: #FFF6E0 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),
+        0 0 12px var(--lotm-gold-glow) !important;
+  border-color: var(--lotm-gold-soft) !important;
+}
+
+input,
+textarea,
+select {
+  background: var(--lotm-bg) !important;
+  color: var(--lotm-paper) !important;
+  border: 1px solid var(--lotm-border) !important;
+  border-radius: 5px !important;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--lotm-gold) !important;
+  box-shadow: 0 0 8px var(--lotm-gold-glow) !important;
+  outline: none !important;
+}
+
+::placeholder {
+  color: var(--lotm-paper-dim) !important;
+}
+
+.tags a,
+.meta a.tag,
+li.relationships a,
+li.characters a,
+li.fandoms a,
+li.freeforms a,
+.work .tags a,
+.blurb .tags a {
+  display: inline-block;
+  background-color: rgba(53, 81, 63, 0.30) !important;
+  color: var(--lotm-paper) !important;
+  border: 1px solid var(--lotm-green) !important;
+  border-radius: 4px !important;
+  padding: 3px 10px !important;
+  margin: 2px 0 !important;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4) !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+}
+
+.tags a:hover,
+.blurb .tags a:hover,
+.work .tags a:hover {
+  background-color: rgba(194, 161, 90, 0.28) !important;
+  border-color: var(--lotm-gold) !important;
+  color: var(--lotm-hover) !important;
+  box-shadow: 0 0 8px var(--lotm-gold-glow) !important;
+}
+
+li.relationships a,
+.work .relationship a.tag {
+  background-color: rgba(90, 43, 48, 0.30) !important;
+  border-color: var(--lotm-wine) !important;
+}
+
+.required-tags a,
+.blurb ul.required-tags span {
+  color: var(--lotm-gold-soft) !important;
+}
+
+.thread .even {
+  background-color: rgba(255,255,255,0.03) !important;
+  border: 1px solid var(--lotm-border-soft) !important;
+  border-radius: 6px !important;
+}
+
+.thread .odd {
+  background-color: rgba(0,0,0,0.25) !important;
+  border: 1px solid var(--lotm-border-soft) !important;
+  border-radius: 6px !important;
+}
+
+.comment .icon img,
+.icon img {
+  border: 1px solid var(--lotm-border) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 6px rgba(0,0,0,0.6) !important;
+}
+
+.comment h4.byline,
+.comment .header,
+.comment .header h4,
+h4.byline {
+  background-color: var(--lotm-panel-2) !important;
+  background-image: none !important;
+  color: var(--lotm-paper) !important;
+  border-color: var(--lotm-border-soft) !important;
+}
+
+.comment h4.byline a,
+.comment .header a {
+  color: var(--lotm-link) !important;
+}
+
+.comment h4.byline a:hover,
+.comment .header a:hover {
+  color: var(--lotm-hover) !important;
+}
+
+.notice,
+.comment_notice,
+.kudos_notice,
+ul.notes {
+  background: var(--lotm-panel-2) !important;
+  color: var(--lotm-paper) !important;
+  border: 1px solid var(--lotm-green) !important;
+  border-radius: 6px !important;
+}
+
+.error,
+.comment_error,
+.kudos_error,
+.alert.flash,
+.caution {
+  background: var(--lotm-panel-2) !important;
+  color: #E8B7B0 !important;
+  border: 1px solid var(--lotm-wine) !important;
+  border-radius: 6px !important;
+}
+
+div#kudos_message.notice {
+  background: var(--lotm-panel-2) !important;
+  border: 1px solid var(--lotm-gold) !important;
+  box-shadow: 0 0 14px var(--lotm-gold-glow) !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  text-align: center !important;
+  padding: 12px !important;
+}
+
+div#kudos_message.notice::before {
+  content: "\2740  The Fool acknowledges your offering.  \2740";
+  display: block;
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: var(--lotm-gold-soft) !important;
+  text-shadow: 0 0 8px var(--lotm-gold-glow);
+}
+
+div#kudos_message.kudos_error {
+  color: transparent !important;
+  font-size: 0 !important;
+  text-align: center !important;
+}
+
+div#kudos_message.kudos_error::before {
+  content: "\1F52E  You have already offered this divination.";
+  display: block;
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  color: #E8B7B0 !important;
+}
+
+dl.stats dd,
+.statistics dd {
+  color: var(--lotm-paper-dim) !important;
+}
+
+.statistics li:nth-child(even) {
+  background-color: rgba(255,255,255,0.02) !important;
+}
+
+dl.stats,
+.statistics {
+  margin: 0 0 10px 0 !important;
+  padding: 8px !important;
+  font-size: 13px !important;
+}
+
+dl.stats dd.language::before,
+dl.stats dd.words::before,
+dl.stats dd.chapters::before,
+dl.stats dd.comments::before,
+dl.stats dd.kudos::before,
+dl.stats dd.bookmarks::before,
+dl.stats dd.hits::before,
+dl.stats dd.collections::before,
+dl.stats dd.published::before,
+dl.stats dd.status::before,
+.statistics dd.language::before,
+.statistics dd.words::before,
+.statistics dd.chapters::before,
+.statistics dd.comments::before,
+.statistics dd.kudos::before,
+.statistics dd.bookmarks::before,
+.statistics dd.hits::before,
+.statistics dd.collections::before {
+  color: var(--lotm-gold) !important;
+  margin-right: 5px;
+  font-size: 0.95em;
+  opacity: 0.9;
+  text-shadow: 0 0 5px var(--lotm-gold-glow);
+}
+
+dl.stats dd.words::before,
+.statistics dd.words::before {
+  content: "\2712";
+}
+
+dl.stats dd.chapters::before,
+.statistics dd.chapters::before {
+  content: "\2767";
+}
+
+dl.stats dd.comments::before,
+.statistics dd.comments::before {
+  content: "\2709";
+}
+
+dl.stats dd.kudos::before,
+.statistics dd.kudos::before {
+  content: "\2726";
+}
+
+dl.stats dd.bookmarks::before,
+.statistics dd.bookmarks::before {
+  content: "\269C";
+}
+
+dl.stats dd.hits::before,
+.statistics dd.hits::before {
+  content: "\2609";
+}
+
+dl.stats dd.language::before,
+.statistics dd.language::before {
+  content: "\2727";
+}
+
+dl.stats dd.published::before,
+.statistics dd.published::before {
+  content: "\2619";
+}
+
+dl.stats dd.status::before,
+.statistics dd.status::before {
+  content: "\263E";
+}
+
+dl.stats dd.collections::before,
+.statistics dd.collections::before {
+  content: "\2756";
+}
+
+.tags li.relationships a::before,
+.work .relationship a.tag::before,
+.tags li.characters a::before,
+.tags li.fandoms a::before,
+.tags li.freeforms a::before,
+.blurb li.fandoms a::before {
+  color: var(--lotm-gold-soft);
+  margin-right: 5px;
+  font-size: 0.85em;
+  opacity: 0.95;
+}
+
+.tags li.relationships a::before,
+.work .relationship a.tag::before {
+  content: "\2765";
+}
+
+.tags li.characters a::before {
+  content: "\2756";
+}
+
+.tags li.fandoms a::before,
+.blurb li.fandoms a::before {
+  content: "\2726";
+}
+
+.tags li.freeforms a::before {
+  content: "\2727";
+}
+
+dl.meta dt::before {
+  content: "\2740 ";
+  color: var(--lotm-gold);
+  opacity: 0.8;
+  font-size: 0.85em;
+}
+
+.actions a.kudo::before,
+p.kudos::before {
+  content: "\1F56F\FE0E ";
+  color: var(--lotm-gold-soft);
+  margin-right: 4px;
+}
+
+.tags a::before {
+  display: inline;
+  white-space: nowrap;
+}
+
+.pagination a,
+.pagination span {
+  background: var(--lotm-panel-2) !important;
+  color: var(--lotm-link) !important;
+  border: 1px solid var(--lotm-border) !important;
+  border-radius: 4px !important;
+}
+
+.pagination .current,
+.pagination a:hover {
+  background: var(--lotm-bronze) !important;
+  color: var(--lotm-hover) !important;
+  border-color: var(--lotm-gold) !important;
+  box-shadow: 0 0 8px var(--lotm-gold-glow) !important;
+}
+
+#footer,
+#footer.region,
+#footer .wrapper,
+#footer .module,
+#footer ul,
+#footer ul.navigation,
+#footer .actions {
+  background-color: var(--lotm-bg-2) !important;
+  background-image: none !important;
+  border-color: var(--lotm-border-soft) !important;
+}
+
+#footer {
+  border-top: 2px solid var(--lotm-gold) !important;
+  box-shadow: 0 -3px 18px rgba(0,0,0,0.7) !important;
+}
+
+#footer li,
+#footer .module,
+#footer ul.navigation li {
+  border-color: var(--lotm-border-soft) !important;
+  box-shadow: none !important;
+}
+
+#footer,
+#footer p,
+#footer li,
+#footer h4.heading {
+  color: var(--lotm-paper-dim) !important;
+}
+
+#footer .heading {
+  color: var(--lotm-gold-soft) !important;
+}
+
+#footer a {
+  color: var(--lotm-link) !important;
+}
+
+#footer a:hover {
+  color: var(--lotm-hover) !important;
+}
+
+#footer .actions li,
+#footer .actions a,
+#footer .actions .button_to,
+#footer .actions button,
+#footer .actions input[type="submit"],
+#footer .actions input[type="button"] {
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  font-size: 1em !important;
+  line-height: 1.4 !important;
+  min-height: 0 !important;
+}
+
+#footer .actions li,
+#footer .actions .button_to {
+  display: inline-block !important;
+}
+
+#footer .actions a,
+#footer .actions button,
+#footer .actions input[type="submit"],
+#footer .actions input[type="button"] {
+  display: inline !important;
+}
+
+#footer .actions button,
+#footer .actions input[type="submit"],
+#footer .actions input[type="button"] {
+  color: var(--lotm-link) !important;
+}
+
+#footer .actions button:hover,
+#footer .actions input[type="submit"]:hover,
+#footer .actions input[type="button"]:hover {
+  color: var(--lotm-hover) !important;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lotm-bg) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #C2A15A, #6F5A3A) !important;
+  border: 2px solid var(--lotm-bg) !important;
+  border-radius: 8px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(180deg, #D8BE82, #C2A15A) !important;
+}
+
+::selection {
+  background: var(--lotm-bronze) !important;
+  color: #FFF6E0 !important;
+}
+
+::-moz-selection {
+  background: var(--lotm-bronze) !important;
+  color: #FFF6E0 !important;
+}
+
+hr {
+  border: none !important;
+  height: 1px !important;
+  background-image: linear-gradient(90deg, transparent, #C2A15A, transparent) !important;
+  margin: 1.5em 0 !important;
+}
+
+.userstuff hr {
+  position: relative;
+  overflow: visible;
+}
+
+.userstuff.module,
+.work,
+.preface {
+  margin: 4px auto !important;
+  box-sizing: border-box !important;
+}
+
+#chapters,
+#workskin .userstuff {
+  color: var(--lotm-paper) !important;
+}
+
+#workskin .userstuff,
+.userstuff {
+  margin: 0 !important;
+  padding: 12px !important;
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  border-radius: 5px !important;
+}
+
+blockquote,
+.userstuff blockquote {
+  border-left: 3px solid var(--lotm-gold) !important;
+  background: rgba(0,0,0,0.25) !important;
+  padding: 0.6em 1em !important;
+  border-radius: 0 6px 6px 0 !important;
+  color: var(--lotm-paper) !important;
+}
+
+.userstuff blockquote {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 10px !important;
+  border-left-width: 2px !important;
+}
+
+.preface {
+  margin: 8px 0 !important;
+  padding: 12px !important;
+  text-align: center !important;
+}
+
+.preface h1,
+.preface h2,
+.title {
+  font-size: 1.8em !important;
+  line-height: 1.2 !important;
+}

@@ -151,7 +151,7 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("https://CrimsonRainSoughtFlowers.github.io/LotmAo3Skin.github.io/fog.png");
+  background-image: url("https://CrimsonRainSoughtFlowers.github.io/LotmAo3Skin.github.io/Skin/fog.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
